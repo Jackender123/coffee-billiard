@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffe Kitty — Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <h1>Coffe Kitty</h1>
+                <p class="tag">Thư giãn — Giải trí — Gặp gỡ bạn bè</p>
+            </div>
+            <nav class="nav">
+                <a href="#about">Giới thiệu</a>
+                <a href="#services">Dịch vụ</a>
+                <a href="#pricing">Giá</a>
+                <button class="btn btn-primary" id="open-reserve">Đặt bàn</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h2>Không gian ấm cúng, trải nghiệm billiard chuyên nghiệp</h2>
+                    <p>Thưởng thức ly cà phê thơm, thư giãn cùng bạn bè và thử tay với những cú đánh billiard tinh tế.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" id="reserve-hero">Đặt ngay</button>
+                        <a href="#services" class="btn btn-ghost">Xem dịch vụ</a>
+                    </div>
+                </div>
+                <div class="hero-art" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section id="about" class="container about">
+            <h3>Giới thiệu</h3>
+            <p>Quán kết hợp cà phê và bàn billiard, phù hợp cho sinh viên, nhóm bạn và các buổi gặp mặt. Không gian thân thiện, Wi‑Fi miễn phí và đồ uống đa dạng.</p>
+        </section>
+
+        <section id="services" class="container cards">
+            <h3>Dịch vụ nổi bật</h3>
+            <div class="grid">
+                <article class="card">
+                    <h4>Cà phê thủ công</h4>
+                    <p>Hạt rang chọn lọc, barista tươi pha theo yêu cầu.</p>
+                </article>
+                <article class="card">
+                    <h4>Billiard chuyên nghiệp</h4>
+                    <p>10 bàn tiêu chuẩn, tính giờ rõ ràng, giá ưu đãi giờ thấp điểm.</p>
+                </article>
+                <article class="card">
+                    <h4>Sự kiện & Giao lưu</h4>
+                    <p>Tổ chức giải nhỏ, event theo nhóm, ưu đãi nhóm đông.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="pricing" class="container pricing">
+            <h3>Giá</h3>
+            <div class="grid">
+                <div class="price">Billiard: <strong>10.000₫ / giờ</strong></div>
+                <div class="price">Cà phê từ: <strong>25.000₫</strong></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+            <div class="container footer-inner">
+            <p>© <span id="year"></span> Coffe Kitty — Địa chỉ: example, TP.</p>
+            <p>Liên hệ: <a href="tel:0900000000">090 000 0000</a></p>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div class="modal" id="reserve-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" id="close-modal" aria-label="Đóng">✕</button>
+            <h4>Đặt bàn</h4>
+            <form id="reserve-form">
+                <label>Họ & tên<input type="text" id="name" required></label>
+                <label>Số điện thoại<input type="tel" id="phone" required></label>
+                <label>Ngày & Giờ<input type="datetime-local" id="datetime" required></label>
+                <label>Số người<input type="number" id="people" min="1" value="2" required></label>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
+                    <button type="button" class="btn btn-ghost" id="cancel-modal">Hủy</button>
+                </div>
+                <p class="form-note">Hoặc gọi trực tiếp: <a href="tel:0900000000">090 000 0000</a></p>
+            </form>
+            <div id="reserve-success" class="hidden">Cảm ơn! Yêu cầu của bạn đã được gửi.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
